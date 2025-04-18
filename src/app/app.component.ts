@@ -1,16 +1,31 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
-  styles: [],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
+  templateUrl: './app.component.html',
+  styleUrls: []
 })
 export class AppComponent {
-  title = 'first-ng-app';
+  newMeeting = {
+    title: '',
+    date: '',
+    time: ''
+  };
+
+  meetings: any[] = [];
+
+  addMeeting() {
+    if (this.newMeeting.title && this.newMeeting.date && this.newMeeting.time) {
+      this.meetings.push({ ...this.newMeeting });
+      this.newMeeting = { title: '', date: '', time: '' };
+    }
+  }
+
+  removeMeeting(index: number) {
+    this.meetings.splice(index, 1);
+  }
 }

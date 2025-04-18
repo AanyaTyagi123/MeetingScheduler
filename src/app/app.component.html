@@ -1,0 +1,50 @@
+<!-- <div style="padding: 20px">
+    <h1>Meeting Scheduler</h1>
+  
+    <form (ngSubmit)="addMeeting()" #form="ngForm">
+      <label>Title:</label>
+      <input [(ngModel)]="newMeeting.title" name="title" required><br><br>
+  
+      <label>Date:</label>
+      <input [(ngModel)]="newMeeting.date" name="date" type="date" required><br><br>
+  
+      <label>Time:</label>
+      <input [(ngModel)]="newMeeting.time" name="time" type="time" required><br><br>
+  
+      <button type="submit" [disabled]="form.invalid">Schedule</button>
+    </form>
+  
+    <h2>Scheduled Meetings</h2>
+    <ul>
+      <li *ngFor="let meeting of meetings; index as i">
+        {{meeting.title}} on {{meeting.date}} at {{meeting.time}}
+        <button (click)="removeMeeting(i)">Cancel</button>
+      </li>
+    </ul>
+  </div> -->
+  <div class="app-container">
+    <h1>Meeting Scheduler</h1>
+  
+    <form (ngSubmit)="addMeeting()" #form="ngForm">
+      <label>Title:</label>
+      <input [(ngModel)]="newMeeting.title" name="title" required>
+  
+      <label>Date:</label>
+      <input [(ngModel)]="newMeeting.date" name="date" type="date" required>
+  
+      <label>Time:</label>
+      <input [(ngModel)]="newMeeting.time" name="time" type="time" required>
+  
+      <button type="submit" [disabled]="form.invalid">Schedule</button>
+    </form>
+  
+    <h2>Scheduled Meetings</h2>
+    <ul>
+      <li *ngFor="let meeting of meetings; index as i">
+        <span>{{meeting.title}} on {{meeting.date}} at {{meeting.time}}</span>
+        <button (click)="removeMeeting(i)">Cancel</button>
+      </li>
+    </ul>
+  </div>
+  
+  
