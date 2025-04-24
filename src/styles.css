@@ -10,19 +10,19 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f5f7fa;
+  font-family: 'Arial', sans-serif;
+  background-color: #b3e0f5;
   padding: 40px;
-  color: #333;
+  color: #000000;
 }
 
 .app-container {
   max-width: 500px;
   margin: auto;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  padding: 30px;
+  box-shadow: 0 4px 20px rgba(19, 25, 26, 0.154);
+  padding: 20px;
 }
 
 h1, h2 {
@@ -51,10 +51,60 @@ form input:focus {
 }
 
 button {
-  background-color: #4a90e2;
+  background-color: #000000;
   color: white;
-  padding: 10px 16px;
+  padding: 10px 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s
+  transition: background-color 0.3s;
+}
+
+/* filepath: /Users/karmendratyagi/first-ng-app/src/app/app.component.css */
+full-calendar {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.custom-snackbar {
+  background-color: #323232; /* dark background */
+  color: white;              /* white text */
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.meeting-item {
+  margin-bottom: 10px;
+}
+
+.meeting-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b3e0f5;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.meeting-info span {
+  flex: 1;
+}
+
+.meeting-info button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.meeting-info button:hover {
+  background-color: #4f3333;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
