@@ -88,6 +88,7 @@ export class AppComponent {
   };
 
   meetings: any[] = [];
+  minDate: string = new Date().toISOString().split('T')[0];
 
   addMeeting() {
     if (this.newMeeting.title && this.newMeeting.date && this.newMeeting.time) {

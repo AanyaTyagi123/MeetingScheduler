@@ -23,14 +23,14 @@
     </ul>
   </div> -->
   <div class="app-container">
-    <h1>Meeting Scheduler</h1>
+    <h1>Scheduler</h1>
   
     <form (ngSubmit)="addMeeting()" #form="ngForm">
       <label>Title:</label>
       <input [(ngModel)]="newMeeting.title" name="title" required>
   
       <label>Date:</label>
-      <input [(ngModel)]="newMeeting.date" name="date" type="date" required>
+      <input [(ngModel)]="newMeeting.date" name="date" type="date" required [min]="minDate">
   
       <label>Time:</label>
       <input [(ngModel)]="newMeeting.time" name="time" type="time" required>
