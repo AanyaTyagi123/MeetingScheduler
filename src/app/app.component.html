@@ -44,7 +44,9 @@
       <li *ngFor="let meeting of meetings; index as i">
         <div class="meeting-info">
           <span>{{meeting.title}} on {{meeting.date}} at {{meeting.time}}</span>
-          <button (click)="removeMeeting(i)">Cancel</button>
+          <button (click)="editMeeting(i)">Edit</button>
+          <button (click)="removeMeeting(i)">Delete</button>
+
         </div>
       </li>
     </ul>

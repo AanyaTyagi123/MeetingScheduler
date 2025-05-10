@@ -101,6 +101,12 @@ export class AppComponent {
       });
     }
   }
+  editMeeting(index: number) {
+  const meeting = this.meetings[index];
+  this.newMeeting = { ...meeting };
+  this.removeMeeting(index); // optional: remove to replace later
+  }
+
 
   removeMeeting(index: number) {
     this.meetings.splice(index, 1);
