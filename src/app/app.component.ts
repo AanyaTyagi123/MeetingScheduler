@@ -91,6 +91,21 @@ export class AppComponent {
   minDate: string = new Date().toISOString().split('T')[0];
 
   addMeeting() {
+    const today = new Date();
+  const selectedDate = new Date(this.newMeeting.date);
+
+  // Remove time for fair comparison (only date matters)
+  today.setHours(0, 0, 0, 0);
+  selectedDate.setHours(0, 0, 0, 0);
+
+  if (selectedDate < today) {
+    this.snackBar.open('Meeting cannot be scheduled for past dates!', 'Close', {
+        duration: 3000,
+        verticalPosition: 'top',
+        panelClass: ['custom-snackbar']
+      });
+    return;
+  }
     if (this.newMeeting.title && this.newMeeting.date && this.newMeeting.time) {
       this.meetings.push({ ...this.newMeeting });
       this.newMeeting = { title: '', date: '', time: '' };
