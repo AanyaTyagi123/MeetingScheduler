@@ -135,23 +135,23 @@ form button {
 
 @media (max-width: 480px) {
   .app-container {
-    width: 90vw;
-    height: 90vh;
-    padding: 15px;
+    width: 95vw;
+    height: auto;
+    padding: 12px;
     border-radius: 12px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
   }
 
   form input, button {
-    font-size: 88px;
+    font-size: 16px;
     padding: 8px;
   }
 
   h1, h2 {
-    font-size: 50px;
+    font-size: 20px;
   }
 
   button {
