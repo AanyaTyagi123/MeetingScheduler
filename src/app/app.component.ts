@@ -99,7 +99,7 @@ export class AppComponent {
   selectedDate.setHours(0, 0, 0, 0);
 
   if (selectedDate < today) {
-    this.snackBar.open('Meeting cannot be scheduled for past dates!', 'Close', {
+    this.snackBar.open('Error: You cannot schedule a meeting for a past date. Please select a future date to schedule your meeting.', 'Close', {
         duration: 3000,
         verticalPosition: 'top',
         panelClass: ['custom-snackbar']
